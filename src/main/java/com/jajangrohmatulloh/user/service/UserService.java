@@ -16,10 +16,9 @@ public class UserService {
     private UserRepository userRepository;
 
     public WebResponse findByFullNameContaining(String fullName) {
-        List<String> users = new ArrayList<>();
-        userRepository.findByFullNameContaining(fullName).forEach(user -> users.add(user.fullName()));
-        System.out.println(users);
+        List<String> DBFullNames = new ArrayList<>();
+        userRepository.findByFullNameContaining(fullName).forEach(user -> DBFullNames.add(user.fullName()));
 
-        return WebResponse.builder().users(users).build();
+        return WebResponse.builder().DBFullNames(DBFullNames).build();
     }
 }

@@ -2,15 +2,11 @@ package com.jajangrohmatulloh.user.model;
 
 import java.util.List;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter
 @Builder
 public class WebResponse {
-    private List<String> users;
+    private List<String> DBFullNames;
 }
