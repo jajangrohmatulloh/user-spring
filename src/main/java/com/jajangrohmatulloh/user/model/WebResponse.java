@@ -12,6 +12,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class WebResponse {
-    
-    private List<UserProjection> users;  
+    private List<String> users;
 }
