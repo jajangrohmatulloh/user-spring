@@ -18,6 +18,7 @@ public class UserService {
     public WebResponse findByFullNameContaining(String fullName) {
         List<String> users = new ArrayList<>();
         userRepository.findByFullNameContaining(fullName).forEach(user -> users.add(user.fullName()));
+        System.out.println(users);
 
         return WebResponse.builder().users(users).build();
     }
